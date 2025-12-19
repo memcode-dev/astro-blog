@@ -4,7 +4,7 @@ date: 2023-06-01
 description: Explorando algunas de las nuevas funciones de ES6 en JavaScript.
 author: jane-doe
 # image: https://placehold.co/1400x900/
-image: '/images/post-01.png'
+image: 'images/post-01.png'
 tags: [JavaScript, ES6, Programming]
 isDraft: false
 ---
