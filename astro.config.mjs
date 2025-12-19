@@ -12,5 +12,5 @@ export default defineConfig({
   },
 
   integrations: [mdx()],
-  site: 'https://soymem.netlify.app/'
+  site: 'https://mem-blog-project.netlify.app/'
 });
