@@ -12,5 +12,5 @@ export default defineConfig({
   },
 
   integrations: [mdx()],
-  site: 'hhtps://exaple.com'
+  site: 'https://soymem.netlify.app/'
 });
