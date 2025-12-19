@@ -1,0 +1,40 @@
+---
+import { Image } from "astro:assets";
+import type { CollectionEntry } from "astro:content";
+
+interface Props {
+    author: CollectionEntry<'author'>
+}
+
+const { author } = Astro.props;
+
+const frontmatter = author.data;
+
+
+---
+
+<div class="max-w-lg mx-auto my-10 bg-gray-200 rounded-lg shadow-md p-5">
+  <Image
+    width={200}
+    height={200}
+    class="rounded-full mx-auto"
+    src={frontmatter.avatar}
+    alt={frontmatter.name}
+  />
+  <h2 class="text-center text-2xl font-semibold mt-3">{frontmatter.name}</h2>
+  <p class="text-center text-gray-600 mt-1">{frontmatter.subtitle}</p>
+  <div class="flex justify-center mt-5">
+    <a href=`https://x.com/${frontmatter.twitter}` class="text-blue-500 hover:text-blue-700 mx-3"> Twitter </a>
+    <a href=`${frontmatter.linkedIn}` class="text-blue-500 hover:text-blue-700 mx-3"> LinkedIn </a>
+    <a href=`${frontmatter.github}` class="text-blue-500 hover:text-blue-700 mx-3"> GitHub </a>
+  </div>
+  <div class="mt-5">
+    <h3 class="text-xl font-semibold">Bio</h3>
+    <p class="text-gray-600 mt-2">
+     {frontmatter.bio}
+    </p>
+  </div>
+  <div class="flex justify-end">
+    <a href=`/blog/${author.id}`>Leer Mas</a>
+  </div>
+</div>;
